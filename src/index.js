@@ -2,11 +2,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import cars from "./practice";
-import animals from "./data";
+import animals, { useAnimal } from "./data";
 
 //destructuring array
 const [cat, dog] = animals;
 //console.log(cat);
+
+//like useState
+const [catName, catSound] = useAnimal(cat);
+console.log(catName);
+catSound();
 
 //destructuring object
 //const {name, sound} = cat;
